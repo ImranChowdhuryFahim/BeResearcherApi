@@ -2,6 +2,9 @@ const express = require('express');
 const multer = require('multer');
 const cors = require('cors');
 const fs = require('fs');
+const mongoose = require('mongoose');
+// eslint-disable-next-line no-unused-vars
+const dotenv = require('dotenv').config();
 
 const app = express();
 
@@ -46,6 +49,15 @@ app.use('/', (req, res) => {
   res.send('hello');
 });
 
-app.listen(8000, () => {
-  console.log('server running');
-});
+mongoose
+  .connect(process.env.mongodbUri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(
+    () => {
+      app.listen(8000, () => {
+        // eslint-disable-next-line no-console
+        console.log('runnig');
+      });
+    },
+  ).catch((err) => {
+    throw err;
+  });
