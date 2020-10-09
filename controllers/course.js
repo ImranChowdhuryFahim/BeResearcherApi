@@ -1,7 +1,7 @@
+/* eslint-disable no-unused-vars */
 const CourseSchema = require('../models/course');
 
 module.exports = {
-  // eslint-disable-next-line no-unused-vars
   CreateCourse: (req, res, next) => {
     const { courseTitle } = req.body;
     const { courseContent } = req.body;
