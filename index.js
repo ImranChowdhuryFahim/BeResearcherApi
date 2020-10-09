@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const multer = require('multer');
 const cors = require('cors');
 const fs = require('fs');
@@ -6,9 +7,15 @@ const mongoose = require('mongoose');
 // eslint-disable-next-line no-unused-vars
 const dotenv = require('dotenv').config();
 
+const courseRouter = require('./routes/course');
+
 const app = express();
 
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json({ extended: false }));
+
+app.use('/api/course', courseRouter);
 
 const storage = multer.diskStorage({
   destination(req, file, cb) {
