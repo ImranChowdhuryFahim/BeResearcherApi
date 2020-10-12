@@ -8,6 +8,7 @@ const dotenv = require('dotenv').config();
 const courseRouter = require('./routes/course');
 const getAssignmentsRouter = require('./routes/getAssignments');
 const uploadAssignmentsRouter = require('./routes/uploadAssignments');
+const studentRouter = require('./routes/student');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(bodyParser.json({ extended: false }));
 app.use('/api/course', courseRouter);
 app.use('/api', getAssignmentsRouter);
 app.use('/api', uploadAssignmentsRouter);
+app.use('/api', studentRouter);
 
 app.use('/', (req, res) => {
   res.send('BeResearcher Api is Running');

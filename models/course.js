@@ -15,6 +15,12 @@ const CourseSchema = new Schema({
     type: String,
     required: true,
   },
+  enrolledStudents: [{
+    _id: mongoose.Types.ObjectId,
+    name: String,
+    institute: String,
+    email: String,
+  }],
 });
 
 module.exports = mongoose.model('course', CourseSchema);

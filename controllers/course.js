@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+const mongoose = require('mongoose');
 const CourseSchema = require('../models/course');
 
 module.exports = {
@@ -22,6 +23,24 @@ module.exports = {
       .then((result) => {
         res.send(result);
       })
+      .catch((err) => {
+        res.send(err);
+      });
+  },
+  EnrollStudent: (req, res, next) => {
+    const { courseTitle } = req.body;
+    const st = {
+      _id: mongoose.Types.ObjectId('1237'),
+      name: 'IMran',
+      institute: 'Cuet',
+      email: 'imran.cuet.cse17@gmail.com',
+    };
+    CourseSchema.updateOne(
+      { courseTitle },
+      { $push: { enrolledStudents: st } },
+    ).then((result) => {
+      res.send(result);
+    })
       .catch((err) => {
         res.send(err);
       });

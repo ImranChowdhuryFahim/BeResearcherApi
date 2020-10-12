@@ -6,5 +6,6 @@ const router = express.Router();
 
 router.route('/create').post(controller.CreateCourse);
 router.route('/getcoursedata/:courseTitle').get(controller.GetCourseData);
+router.route('/getcoursedata/:courseTitle').post(controller.EnrollStudent);
 
 module.exports = router;
