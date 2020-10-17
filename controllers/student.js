@@ -50,14 +50,13 @@ module.exports = {
       });
   },
   UpdateCourseProgress: (req, res, next) => {
+    const { id } = req.body;
     const { email } = req.body;
-    const { completed } = req.body;
     const { completedItem } = req.body;
-    const { currentContentDetails } = req.body;
     StudentSchema.updateOne(
       { email },
-      { $set: { 'enrolledCourses.$[outer].completed': completed, 'enrolledCourses.$[outer].completedItem': completedItem, 'enrolledCourses.$[outer].currentContentDetails': currentContentDetails } },
-      { arrayFilters: [{ 'outer._id': mongoose.Types.ObjectId('5f8ac2936e9334246ba98438') }] },
+      { $set: { 'enrolledCourses.$[outer].completedItem': completedItem } },
+      { arrayFilters: [{ 'outer._id': mongoose.Types.ObjectId(id) }] }, // ekane id dilam
     ).then((result) => {
       res.send(result);
     })
@@ -68,6 +67,17 @@ module.exports = {
   GetDetails: (req, res, next) => {
     const { email } = req.params;
     StudentSchema.findOne({ email })
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  },
+  Login: (req, res, next) => {
+    const { email } = req.body;
+    const { password } = req.body;
+    StudentSchema.findOne({ email, password }).select('enrolledCourses firstName lastName email')
       .then((result) => {
         res.send(result);
       })
