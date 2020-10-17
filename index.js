@@ -26,10 +26,10 @@ app.use('/', (req, res) => {
 });
 
 mongoose
-  .connect(process.env.mongodbUri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect('mongodb+srv://dbadmin:cuetcse17@beresearcherbd.sfhvs.mongodb.net/BeResearcher?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(
     () => {
-      app.listen(8000, () => {
+      app.listen(8000 || process.env.PORT, () => {
         // eslint-disable-next-line no-console
         console.log('runnig');
       });
