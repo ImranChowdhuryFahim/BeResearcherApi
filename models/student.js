@@ -30,10 +30,7 @@ const StudentSchema = new Schema({
   enrolledCourses: [{
     _id: mongoose.Types.ObjectId,
     title: String,
-    completed: String,
-    totalItem: String,
     completedItem: String,
-    currentContentDetails: Object,
   }],
 });
 

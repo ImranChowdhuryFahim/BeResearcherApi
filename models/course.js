@@ -21,6 +21,10 @@ const CourseSchema = new Schema({
     institute: String,
     email: String,
   }],
+  totalItem: {
+    type: Number,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model('course', CourseSchema);

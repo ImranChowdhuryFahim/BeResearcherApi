@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 const mongoose = require('mongoose');
-const StudentSchema = require('../models/studen');
+const StudentSchema = require('../models/student');
 const CourseSchema = require('../models/course');
 
 module.exports = {
@@ -12,19 +12,9 @@ module.exports = {
     const { institution } = req.body;
     const { occupation } = req.body;
     const enrolledCourses = [{
-      _id: mongoose.Types.ObjectId('5f82fcb88c7efc487acf1143'),
+      _id: mongoose.Types.ObjectId('5f8ac2936e9334246ba98438'),
       title: 'Research Methodology',
-      completed: '0%',
-      totalItem: '20',
       completedItem: '0',
-      currentContentDetails: {
-        id: 1,
-        unit: 1,
-        title:
-              'Webinar Speech: আমি কি পারব গবেষক হতে? - Can I become a researcher? - Mymensingh Eng. College',
-        src: 'https://youtu.be/Ra6vA6-GbiI',
-        type: 'lecture',
-      },
     }];
 
     const Student = new StudentSchema({
@@ -45,7 +35,7 @@ module.exports = {
                 email: result.email,
               };
               CourseSchema.updateOne(
-                { _id: mongoose.Types.ObjectId('5f82fcb88c7efc487acf1143') },
+                { _id: mongoose.Types.ObjectId('5f8ac2936e9334246ba98438') },
                 { $push: { enrolledStudents: st } },
               ).then((result1) => {
                 res.send('registered');
@@ -67,7 +57,7 @@ module.exports = {
     StudentSchema.updateOne(
       { email },
       { $set: { 'enrolledCourses.$[outer].completed': completed, 'enrolledCourses.$[outer].completedItem': completedItem, 'enrolledCourses.$[outer].currentContentDetails': currentContentDetails } },
-      { arrayFilters: [{ 'outer._id': mongoose.Types.ObjectId('5f82fcb88c7efc487acf1143') }] },
+      { arrayFilters: [{ 'outer._id': mongoose.Types.ObjectId('5f8ac2936e9334246ba98438') }] },
     ).then((result) => {
       res.send(result);
     })

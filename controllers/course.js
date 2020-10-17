@@ -7,8 +7,9 @@ module.exports = {
     const { courseTitle } = req.body;
     const { courseContent } = req.body;
     const { createdBy } = req.body;
+    const { totalItem } = req.body;
     const Course = new CourseSchema({
-      courseTitle, courseContent, createdBy,
+      courseTitle, courseContent, createdBy, totalItem,
     });
     Course.save()
       .then((result) => {
@@ -19,7 +20,7 @@ module.exports = {
   },
   GetCourseData: (req, res, next) => {
     const { courseTitle } = req.params;
-    CourseSchema.find({ courseTitle })
+    CourseSchema.findOne({ courseTitle })
       .then((result) => {
         res.send(result);
       })
