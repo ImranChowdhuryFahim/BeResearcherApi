@@ -25,15 +25,16 @@ app.use('/', (req, res) => {
   res.send('BeResearcher Api is Running');
 });
 
-mongoose
-  .connect('mongodb+srv://dbadmin:cuetcse17@beresearcherbd.sfhvs.mongodb.net/BeResearcher?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(
-    () => {
-      app.listen(8000 || process.env.PORT, () => {
-        // eslint-disable-next-line no-console
-        console.log('runnig');
-      });
-    },
-  ).catch((err) => {
-    throw err;
-  });
+app.listen(process.env.PORT || 8000, () => {
+  // eslint-disable-next-line no-console
+  console.log('runnig');
+});
+// mongoose
+//   .connect('mongodb+srv://dbadmin:cuetcse17@beresearcherbd.sfhvs.mongodb.net/BeResearcher?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+//   .then(
+//     () => {
+      
+//     },
+//   ).catch((err) => {
+//     throw err;
+//   });
