@@ -31,6 +31,7 @@ const StudentSchema = new Schema({
     _id: mongoose.Types.ObjectId,
     title: String,
     completedItem: String,
+    currentContentDetails: Object,
   }],
 });
 

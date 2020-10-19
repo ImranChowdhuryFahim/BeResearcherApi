@@ -1,12 +1,15 @@
 const fs = require('fs');
 
-const baseDir = './public/';
+const baseDir = './public/uploads/';
 module.exports = {
   GetAssingment: (req, res) => {
-    res.download(`${baseDir}logo2.png`);
+    const { folderid } = req.params;
+    const { assignmentname } = req.params;
+    res.download(`${baseDir}${folderid}${'/'}${assignmentname}`);
   },
   GetAssingmentDir: (req, res) => {
-    fs.readdir('./public', (err, files) => {
+    const { folderid } = req.params;
+    fs.readdir(`./public/uploads/${folderid}/`, (err, files) => {
       res.send(files);
     });
   },

@@ -46,4 +46,17 @@ module.exports = {
         res.send(err);
       });
   },
+  UpdateCourseContent: (req, res, next) => {
+    const { courseTitle } = req.body;
+    const { courseContent } = req.body;
+    CourseSchema.updateOne(
+      { courseTitle },
+      { $set: { courseContent } },
+    ).then((result) => {
+      res.send(result);
+    })
+      .catch((err) => {
+        res.send(err);
+      });
+  },
 };
