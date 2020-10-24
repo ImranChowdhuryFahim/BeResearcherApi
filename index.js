@@ -9,6 +9,7 @@ const courseRouter = require('./routes/course');
 const getAssignmentsRouter = require('./routes/getAssignments');
 const uploadAssignmentsRouter = require('./routes/uploadAssignments');
 const studentRouter = require('./routes/student');
+const reviewAssignmentsRouter = require('./routes/reviewAssignments');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use('/api/course', courseRouter);
 app.use('/api', getAssignmentsRouter);
 app.use('/api', uploadAssignmentsRouter);
 app.use('/api', studentRouter);
+app.use('/api', reviewAssignmentsRouter);
 
 app.use('/', (req, res) => {
   res.send('BeResearcher Api is Running');
