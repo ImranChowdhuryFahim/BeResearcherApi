@@ -24,7 +24,7 @@ module.exports = {
               res.send('registerd');
             });
         } else {
-          res.send('registered');
+          res.send('already Exists');
         }
       })
       .catch((usererr) => {
