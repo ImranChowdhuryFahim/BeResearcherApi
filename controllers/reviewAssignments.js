@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
 //   service: 'gmail',
   auth: {
     user: 'beresearcherbd@gmail.com', // generated ethereal user
-    pass: 'cuetcse17', // generated ethereal password
+    pass: 'CuetCse!&', // generated ethereal password
   },
   tls: {
     // do not fail on invalid certs
