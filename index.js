@@ -10,6 +10,7 @@ const getAssignmentsRouter = require('./routes/getAssignments');
 const uploadAssignmentsRouter = require('./routes/uploadAssignments');
 const studentRouter = require('./routes/student');
 const reviewAssignmentsRouter = require('./routes/reviewAssignments');
+const supervisorRouter = require('./routes/supervisor');
 
 const app = express();
 
@@ -22,10 +23,11 @@ app.use('/api', getAssignmentsRouter);
 app.use('/api', uploadAssignmentsRouter);
 app.use('/api', studentRouter);
 app.use('/api', reviewAssignmentsRouter);
+app.use('/api', supervisorRouter);
 
-// app.use('/', (req, res) => {
-//   res.send('BeResearcher Api is Running');
-// });
+app.use('/', (req, res) => {
+  res.send('BeResearcher Api is Running');
+});
 
 mongoose
   .connect('mongodb+srv://dbadmin:cuetcse17@beresearcherbd.sfhvs.mongodb.net/BeResearcher?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
