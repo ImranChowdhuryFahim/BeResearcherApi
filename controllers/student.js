@@ -14,7 +14,7 @@ module.exports = {
     const enrolledCourses = [{
       _id: mongoose.Types.ObjectId('5f8ac2936e9334246ba98438'),
       title: 'Research Methodology',
-      completedItem: '1',
+      completedItem: '0',
       currentContentDetails: {
         id: 1,
         unit: 1,
