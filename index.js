@@ -25,9 +25,9 @@ app.use('/api', studentRouter);
 app.use('/api', reviewAssignmentsRouter);
 app.use('/api', supervisorRouter);
 
-app.use('/', (req, res) => {
-  res.send('BeResearcher Api is Running');
-});
+// app.use('/', (req, res) => {
+//   res.send('BeResearcher Api is Running');
+// });
 
 mongoose
   .connect('mongodb+srv://dbadmin:cuetcse17@beresearcherbd.sfhvs.mongodb.net/BeResearcher?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })

@@ -10,7 +10,12 @@ module.exports = {
   GetAssingmentDir: (req, res) => {
     const { folderid } = req.params;
     fs.readdir(`./public/uploads/${folderid}/`, (err, files) => {
-      res.send(files);
+      if (files === undefined) {
+        const a = [];
+        res.send(a);
+      } else {
+        res.send(files);
+      }
     });
   },
 };
