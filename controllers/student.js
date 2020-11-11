@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 const StudentSchema = require('../models/student');
 const CourseSchema = require('../models/course');
 
@@ -74,21 +75,42 @@ module.exports = {
       });
   },
   GetDetails: (req, res, next) => {
-    const { email } = req.params;
-    StudentSchema.findOne({ email })
-      .then((result) => {
-        res.send(result);
-      })
-      .catch((err) => {
-        res.send(err);
+    // eslint-disable-next-line no-underscore-dangle
+    // eslint-disable-next-line valid-typeof
+    if (req.headers.auth !== undefined) {
+      jwt.verify(req.headers.auth, 'beresearcherbd874', (err, authData) => {
+        const { email } = authData.user;
+        StudentSchema.findOne({ email })
+          .then((result) => {
+            res.send(result);
+          })
+          .catch((err1) => {
+            res.send(err1);
+          });
       });
+    } else {
+      res.send();
+    }
   },
   Login: (req, res, next) => {
     const { email } = req.body;
     const { password } = req.body;
     StudentSchema.findOne({ email, password }).select('enrolledCourses firstName lastName email')
       .then((result) => {
-        res.send(result);
+        if (result.length !== 0) {
+          const user = {
+            name: `${result.firstName} ${result.lastName}`,
+            email: result.email,
+            // eslint-disable-next-line no-underscore-dangle
+            id: result._id,
+          };
+
+          jwt.sign({ user }, 'beresearcherbd874', (err, token) => {
+            res.json({ token });
+          });
+        } else {
+          res.send(result);
+        }
       })
       .catch((err) => {
         res.send(err);

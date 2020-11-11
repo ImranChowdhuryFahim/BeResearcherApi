@@ -39,6 +39,10 @@ mongoose
     throw err;
   });
 
+app.get('/', (req, res, next) => {
+  res.send('chole');
+});
+
 app.listen(process.env.PORT || 8001, () => {
   // eslint-disable-next-line no-console
   console.log('runnig');
