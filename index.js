@@ -11,6 +11,7 @@ const uploadAssignmentsRouter = require('./routes/uploadAssignments');
 const studentRouter = require('./routes/student');
 const reviewAssignmentsRouter = require('./routes/reviewAssignments');
 const supervisorRouter = require('./routes/supervisor');
+const announcementRouter = require('./routes/announcement');
 
 const app = express();
 
@@ -24,18 +25,19 @@ app.use('/api', uploadAssignmentsRouter);
 app.use('/api', studentRouter);
 app.use('/api', reviewAssignmentsRouter);
 app.use('/api', supervisorRouter);
+app.use('/api', announcementRouter);
 
 // app.use('/', (req, res) => {
 //   res.send('BeResearcher Api is Running');
 // });
 
 mongoose
-  .connect('mongodb+srv://dbadmin:cuetcse17@beresearcherbd.sfhvs.mongodb.net/BeResearcher?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(
-    () => {
-
-    },
-  ).catch((err) => {
+  .connect(
+    'mongodb+srv://dbadmin:cuetcse17@beresearcherbd.sfhvs.mongodb.net/BeResearcher?retryWrites=true&w=majority',
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
+  .then(() => {})
+  .catch((err) => {
     throw err;
   });
 

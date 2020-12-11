@@ -1,0 +1,10 @@
+
+POST http://localhost:8001/api/postannouncement
+content-type: application/json
+
+{
+    "title": "first announcement",
+    "message": "Prepare your reports within nex tuesday",
+    "author": "Rest Client",
+    "target": ["5f8f2e9b8fd9050024d0aa24", "5f8ac36ca7463225dc0c8920"]
+}

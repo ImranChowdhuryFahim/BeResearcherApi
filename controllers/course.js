@@ -9,12 +9,16 @@ module.exports = {
     const { createdBy } = req.body;
     const { totalItem } = req.body;
     const Course = new CourseSchema({
-      courseTitle, courseContent, createdBy, totalItem,
+      courseTitle,
+      courseContent,
+      createdBy,
+      totalItem,
     });
     Course.save()
       .then((result) => {
         res.send(result);
-      }).catch((err) => {
+      })
+      .catch((err) => {
         res.send(err);
       });
   },
@@ -36,12 +40,10 @@ module.exports = {
       institute: 'Cuet',
       email: 'imran.cuet.cse17@gmail.com',
     };
-    CourseSchema.updateOne(
-      { courseTitle },
-      { $push: { enrolledStudents: st } },
-    ).then((result) => {
-      res.send(result);
-    })
+    CourseSchema.updateOne({ courseTitle }, { $push: { enrolledStudents: st } })
+      .then((result) => {
+        res.send(result);
+      })
       .catch((err) => {
         res.send(err);
       });
@@ -52,10 +54,11 @@ module.exports = {
     const { totalItem } = req.body;
     CourseSchema.updateOne(
       { courseTitle },
-      { $set: { courseContent, totalItem } },
-    ).then((result) => {
-      res.send(result);
-    })
+      { $set: { courseContent, totalItem } }
+    )
+      .then((result) => {
+        res.send(result);
+      })
       .catch((err) => {
         res.send(err);
       });

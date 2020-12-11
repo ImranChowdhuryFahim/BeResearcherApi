@@ -27,12 +27,35 @@ const StudentSchema = new Schema({
     type: String,
     required: true,
   },
-  enrolledCourses: [{
-    _id: mongoose.Types.ObjectId,
-    title: String,
-    completedItem: String,
-    currentContentDetails: Object,
-  }],
+  enrolledCourses: [
+    {
+      _id: mongoose.Types.ObjectId,
+      title: String,
+      completedItem: String,
+      currentContentDetails: Object,
+    },
+  ],
+  recievedAnnouncementIds: [
+    {
+      _id: mongoose.Types.ObjectId,
+      title: {
+        type: String,
+        required: true,
+      },
+      message: {
+        type: String,
+        required: true,
+      },
+      author: {
+        type: String,
+        required: true,
+      },
+      createdAt: {
+        type: Date,
+        default: Date.now,
+      },
+    },
+  ],
 });
 
 module.exports = mongoose.model('student', StudentSchema);
