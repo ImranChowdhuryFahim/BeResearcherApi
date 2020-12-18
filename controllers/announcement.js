@@ -5,6 +5,7 @@ const StudentModel = require('../models/student');
 module.exports = {
   postAnnouncement: async (req, resp, next) => {
     const { title, message, author, target } = req.body;
+    console.log(req.body);
     const announcement = new AnnouncementSchema({
       title,
       message,
