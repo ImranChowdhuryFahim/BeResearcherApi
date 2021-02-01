@@ -54,7 +54,7 @@ module.exports = {
     const { totalItem } = req.body;
     CourseSchema.updateOne(
       { courseTitle },
-      { $set: { courseContent, totalItem } }
+      { $set: { courseContent, totalItem } },
     )
       .then((result) => {
         res.send(result);

@@ -1,10 +1,15 @@
+// eslint-disable-next-line no-unused-vars
 const mongoose = require('mongoose');
 const AnnouncementSchema = require('../models/announcement');
 const StudentModel = require('../models/student');
 
 module.exports = {
+  // eslint-disable-next-line no-unused-vars
   postAnnouncement: async (req, resp, next) => {
-    const { title, message, author, target } = req.body;
+    const {
+      title, message, author, target,
+    } = req.body;
+    // eslint-disable-next-line no-console
     console.log(req.body);
     const announcement = new AnnouncementSchema({
       title,
@@ -23,7 +28,8 @@ module.exports = {
           },
           { $push: { recievedAnnouncementIds: result } },
 
-          (err, doc) => {}
+          // eslint-disable-next-line no-unused-vars
+          (err, doc) => {},
         );
 
         resp.send({ message: 'Assingment successfully sent' });
@@ -33,6 +39,7 @@ module.exports = {
       });
   },
 
+  // eslint-disable-next-line no-unused-vars
   getAnnouncement: async (req, resp, next) => {
     // resp.send('nana ami na');
 
@@ -45,9 +52,10 @@ module.exports = {
     //   });
 
     const announcement = await AnnouncementSchema.findById(
-      req.params.id
+      req.params.id,
     ).exec();
 
+    // eslint-disable-next-line no-console
     console.log(announcement);
     resp.send(announcement);
   },

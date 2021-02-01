@@ -27,9 +27,9 @@ app.use('/api', reviewAssignmentsRouter);
 app.use('/api', supervisorRouter);
 app.use('/api', announcementRouter);
 
-// app.use('/', (req, res) => {
-//   res.send('BeResearcher Api is Running');
-// });
+app.use('/', (req, res) => {
+  res.send('BeResearcher Api is Running');
+});
 
 mongoose
   .connect(

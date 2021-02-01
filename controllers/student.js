@@ -57,7 +57,7 @@ module.exports = {
             };
             CourseSchema.updateOne(
               { _id: mongoose.Types.ObjectId('5f8ac2936e9334246ba98438') },
-              { $push: { enrolledStudents: st } }
+              { $push: { enrolledStudents: st } },
             ).then((result1) => {
               res.send('registered');
             });
@@ -83,7 +83,7 @@ module.exports = {
           'enrolledCourses.$[outer].currentContentDetails': currentContentDetails,
         },
       },
-      { arrayFilters: [{ 'outer._id': mongoose.Types.ObjectId(id) }] } // ekane id dilam
+      { arrayFilters: [{ 'outer._id': mongoose.Types.ObjectId(id) }] }, // ekane id dilam
     )
       .then((result) => {
         res.send(result);
@@ -133,6 +133,15 @@ module.exports = {
       })
       .catch((err) => {
         res.send(err);
+      });
+  },
+  GetAllEnrolledStudents: (req, res, next) => {
+    const { courseTitle } = req.params;
+
+    StudentSchema.find({ enrolledCourses: { $elemMatch: { title: courseTitle } } })
+      .select('enrolledCourses firstName lastName email institution')
+      .then((result) => {
+        res.send(result);
       });
   },
 };

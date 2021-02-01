@@ -9,5 +9,6 @@ router.route('/student/courseprogress').put(controller.UpdateCourseProgress);
 router.route('/student/getdetails').get(controller.GetDetails);
 router.route('/student/getall').get(controller.getAll);
 router.route('/student/login').post(controller.Login);
+router.route('/student/get_all_enrolled_students/:courseTitle').get(controller.GetAllEnrolledStudents);
 
 module.exports = router;
