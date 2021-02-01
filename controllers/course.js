@@ -63,4 +63,12 @@ module.exports = {
         res.send(err);
       });
   },
+  GetTotalItem: (req, res, next) => {
+    const { courseTitle } = req.params;
+
+    CourseSchema.findOne({ courseTitle }).select('totalItem')
+      .then((result) => {
+        res.send(result);
+      });
+  },
 };
