@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 /* eslint-disable no-unused-vars */
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
