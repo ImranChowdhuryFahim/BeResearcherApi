@@ -18,6 +18,7 @@ module.exports = {
     const { password } = req.body;
     const { institution } = req.body;
     const { occupation } = req.body;
+    const { researchField } = req.body;
     const enrolledCourses = [
       {
         _id: mongoose.Types.ObjectId('5f8ac2936e9334246ba98438'),
@@ -41,6 +42,7 @@ module.exports = {
       password,
       institution,
       occupation,
+      researchField,
       enrolledCourses,
     });
 

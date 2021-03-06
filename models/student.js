@@ -27,6 +27,10 @@ const StudentSchema = new Schema({
     type: String,
     required: true,
   },
+  researchField: {
+    type: String,
+    required: true,
+  },
   enrolledCourses: [
     {
       _id: mongoose.Types.ObjectId,
