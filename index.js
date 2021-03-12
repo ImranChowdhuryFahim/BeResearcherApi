@@ -17,6 +17,7 @@ const dowloadImageRouter = require('./routes/downloadImage');
 const blogRouter = require('./routes/blog');
 const newsRouter = require('./routes/news');
 const eventRouter = require('./routes/event');
+const studentCompletedCourseRouter = require('./routes/studentCompletedCourse');
 
 const app = express();
 
@@ -36,26 +37,27 @@ app.use('/api', dowloadImageRouter);
 app.use('/api', blogRouter);
 app.use('/api', newsRouter);
 app.use('/api', eventRouter);
+app.use('/api', studentCompletedCourseRouter);
 
 app.use('/', (req, res) => {
-  res.send('BeResearcher Api is Running');
+	res.send('BeResearcher Api is Running');
 });
 
 mongoose
-  .connect(
-    'mongodb+srv://dbadmin:cuetcse17@beresearcherbd.sfhvs.mongodb.net/BeResearcher?retryWrites=true&w=majority',
-    { useNewUrlParser: true, useUnifiedTopology: true },
-  )
-  .then(() => {})
-  .catch((err) => {
-    throw err;
-  });
+	.connect(
+		'mongodb+srv://dbadmin:cuetcse17@beresearcherbd.sfhvs.mongodb.net/BeResearcher?retryWrites=true&w=majority',
+		{ useNewUrlParser: true, useUnifiedTopology: true }
+	)
+	.then(() => {})
+	.catch((err) => {
+		throw err;
+	});
 
 app.get('/', (req, res, next) => {
-  res.send('chole');
+	res.send('chole');
 });
 
 app.listen(process.env.PORT || 8001, () => {
-  // eslint-disable-next-line no-console
-  console.log('runnig');
+	// eslint-disable-next-line no-console
+	console.log('runnig');
 });
