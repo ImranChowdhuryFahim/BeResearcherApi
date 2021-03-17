@@ -5,7 +5,7 @@ const controller = require('../controllers/studentCompletedCourse');
 const router = express.Router();
 
 router
-	.route('/get-students-completed-course')
+	.route('/get-students-completed-course/:courseId')
 	.get(controller.getStudentCompletedCourse);
 router
 	.route('/create-student-completed-course-list')

@@ -28,7 +28,7 @@ module.exports = {
 			.catch((err) => res.send({ err }));
 	},
 	getStudentCompletedCourse: function (req, res) {
-		const { courseId } = req.body;
+		const { courseId } = req.params;
 		StudentCompletdCourseModel.findOne({ courseId }).then((result) =>
 			res.send(result)
 		);
