@@ -1,5 +1,7 @@
 const StudentCompletdCourseModel = require('../models/StudentCompletedCourse');
 
+const StudentSchema = require('../models/student');
+
 module.exports = {
 	createStudentCompletedCourseList: function (req, res) {
 		const { courseId, students } = req.body;
@@ -18,14 +20,26 @@ module.exports = {
 			});
 	},
 	pushStudentCompletedCourse: function (req, res) {
+		
 		const { courseId, student } = req.body;
-
+		const { email } = student;
+		
+		StudentSchema.findOne({ email })
+      .select('institution')
+	  .then((res1) => {
+		  
+		student['institution']=res1.institution;
+		
 		StudentCompletdCourseModel.updateOne(
 			{ courseId },
 			{ $push: { students: student } }
 		)
 			.then((result) => res.send({ result }))
 			.catch((err) => res.send({ err }));
+
+	  });
+
+		
 	},
 	getStudentCompletedCourse: function (req, res) {
 		const { courseId } = req.params;

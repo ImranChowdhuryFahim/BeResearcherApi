@@ -19,6 +19,10 @@ const Student = new Schema({
 		type: String,
 		required: true,
 	},
+	institution: {
+		type: String,
+		required: true,
+	},
 });
 
 const StudentCompletedCourse = new Schema({
