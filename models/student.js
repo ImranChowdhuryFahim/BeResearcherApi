@@ -23,6 +23,14 @@ const StudentSchema = new Schema({
     type: String,
     required: true,
   },
+  dept:{
+    type: String,
+    required: true,
+  },
+  country:{
+    type:String,
+    required: true,
+  },
   occupation: {
     type: String,
     required: true,

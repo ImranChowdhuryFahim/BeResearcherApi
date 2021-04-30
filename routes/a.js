@@ -109,25 +109,18 @@
                 "title": "লেকচার ৩.২ঃ বিষয় ভিত্তিক গবেষণাপত্র ফ্রি ডাউনলোড । Download Topic Related Articles Free",
                 "src": "https://youtu.be/BzG2O1h80Ys",
                 "type": "lecture"
-            },
-            {
-                "id": 9,
-                "unit": 1,
-                "title": "Assignment 1",
-                "description": "Final Paper Assignment Description. Paper Goals: This final paper is the capstone assignment of COM 431 since it requires you to use all that you have learned ...",
-                "type": "assignment"
             }
         ],
         "2": [
             {
-                "id": 10,
+                "id": 9,
                 "unit": 2,
                 "title": "লেকচার ৩.৩ঃ কিভাবে গবেষণাপত্র পড়ব? । How to read research paper?",
                 "src": "https://youtu.be/3FJ0RTBw4tM",
                 "type": "lecture"
             },
             {    
-                "id": 11,
+                "id": 10,
                 "unit": 2,
                 "title": "Quiz",
                 "type":"quiz",
@@ -165,28 +158,28 @@
                 ]
             },
             {
-                "id": 12,
+                "id": 11,
                 "unit": 2,
                 "title": "লেকচার ৪.১ঃ ভালো গবেষণাপত্র/জার্নাল খুঁজে পাওয়ার উপায় । How to find out good quality papers/journals",
                 "src": "https://youtu.be/QAUfuu_1Hhs",
                 "type": "lecture"
             },
             {
-                "id": 13,
+                "id": 12,
                 "unit": 2,
                 "title": "লেকচার ৪.২ঃ ভুয়া জার্নাল/পাবলিশার চেনার উপায় । How to avoid fake/predatory journals/publishers?",
                 "src": "https://youtu.be/XRgpEPnZwPM",
                 "type": "lecture"
             },
             {
-                "id": 14,
+                "id": 13,
                 "unit": 2,
                 "title": "লেকচার ৪.৩ঃ লিটারেচার রিভিউ লেখার নিয়ম উদাহরণসহ । How to write literature review with examples?",
                 "src": "https://youtu.be/KL8AghDVA_Y",
                 "type": "lecture"
             },
             {    
-                "id": 15,
+                "id": 14,
                 "unit": 2,
                 "title": "Quiz",
                 "type":"quiz",
@@ -224,28 +217,28 @@
                 ]
             },
             {
-                "id": 16,
+                "id": 15,
                 "unit": 2,
                 "title": "লেকচার ৫.১ঃ রিসার্চ/লিটারেচার গ্যাপ বের করার উপায় । How to find out research/literature gaps?",
                 "src": "https://youtu.be/Mcz64BZEuv0",
                 "type": "lecture"
             },
             {
-                "id": 17,
+                "id": 16,
                 "unit": 2,
                 "title": "লেকচার ৫.২ঃ রিসার্চ কোয়েশ্চেন নির্ধারণ । Determination of research questions",
                 "src": "https://youtu.be/e6-4kFmOVAk",
                 "type": "lecture"
             },
             {
-                "id": 18,
+                "id": 17,
                 "unit": 2,
                 "title": "লেকচার ৫.৩ঃ রিসার্চ হাইপোথেসিস সেট করা । Setting Research Hypothesis",
                 "src": "https://youtu.be/J6UXlT8IN6Y",
                 "type": "lecture"
             },
             {    
-                "id": 19,
+                "id": 18,
                 "unit": 2,
                 "title": "Quiz",
                 "type":"quiz",
@@ -280,21 +273,21 @@
         ],
         "3": [
             {
-                "id": 20,
+                "id": 19,
                 "unit": 3,
                 "title": "লেকচার ৬.১ঃ বিভিন্ন ধরণের রিসার্চ আর্টিকেল । Different types of research articles",
                 "src": "https://youtu.be/Qrz00d_JFiY",
                 "type": "lecture"
             },
             {
-                "id": 21,
+                "id": 20,
                 "unit": 3,
                 "title": "লেকচার ৬.২ঃ রিসার্চ আর্টিকেল/প্রোপোজাল-এর সাধারণ গঠণ । Structure of Research Article/Proposal",
                 "src": "https://youtu.be/65N34eV6GFo",
                 "type": "lecture"
             },
             {    
-                "id": 22,
+                "id": 21,
                 "unit": 3,
                 "title": "Quiz",
                 "type":"quiz",
@@ -332,28 +325,28 @@
                 ]
             },
             {
-                "id": 23,
+                "id": 22,
                 "unit": 3,
                 "title": "লেকচার ৭.১ঃ রিসার্চ মেথডোলজি-এর বেসিক ধারণা । Research Methodology Basics",
                 "src": "https://youtu.be/UcDMFlnYHmA",
                 "type": "lecture"
             },
             {
-                "id": 24,
+                "id": 23,
                 "unit": 3,
                 "title": "লেকচার ৭.২.১ঃ রিসার্চ মেথডোলজি লিখার ধাপসমূহ (১ম অংশ) । Steps in writing research methodology",
                 "src": "https://youtu.be/2As0JbLEWpI",
                 "type": "lecture"
             },
             {
-                "id": 25,
+                "id": 24,
                 "unit": 3,
                 "title": "লেকচার ৭.২.২ঃ রিসার্চ মেথডোলজি লিখার ধাপসমূহ (২য় অংশ) । Steps in writing research methodology",
                 "src": "https://youtu.be/90eLJ68SLus",
                 "type": "lecture"
             },
             {    
-                "id": 26,
+                "id": 25,
                 "unit": 3,
                 "title": "Quiz",
                 "type":"quiz",
@@ -396,21 +389,21 @@
                 ]
             },
             {
-                "id": 27,
+                "id": 26,
                 "unit": 3,
                 "title": "লেকচার ৮.১ঃ ডাটা কালেকশন মেথডসমূহ ও স্যাম্পলিং । Data Collection Methods and Sampling",
                 "src": "https://youtu.be/DhQlqnbs1SY",
                 "type": "lecture"
             },
             {
-                "id": 28,
+                "id": 27,
                 "unit": 3,
                 "title": "লেকচার ৮.২ঃ লাইকার্ট স্কেল - এর মাধ্যমে ডাটা কালেকশন ও এনালাইসিস । Likert Scale - Data Collection",
                 "src": "https://youtu.be/AaPzouNyjlo",
                 "type": "lecture"
             },
             {    
-                "id": 29,
+                "id": 28,
                 "unit": 3,
                 "title": "Quiz",
                 "type":"quiz",
@@ -450,14 +443,14 @@
         ],
         "4": [
             {
-                "id": 30,
+                "id": 29,
                 "unit": 4,
                 "title": "লেকচার ৯ঃ রেজাল্ট প্রদর্শণের বিভিন্ন পদ্ধতি ও টুলস, ইভালুয়েশন । Result Representation and Evaluation",
                 "src": "https://youtu.be/RVLByrdYE0o",
                 "type": "lecture"
             },
             {    
-                "id": 31,
+                "id": 30,
                 "unit": 4,
                 "title": "Quiz",
                 "type":"quiz",
@@ -490,21 +483,21 @@
                 ]
             },
             {
-                "id": 32,
+                "id": 31,
                 "unit": 4,
                 "title": "লেকচার ১০.১ঃ রেফারেন্সিং ও সাইটেশন স্টাইল । Referencing and Citation Styles",
                 "src": "https://youtu.be/-LaO5mNdgdY",
                 "type": "lecture"
             },
             {
-                 "id": 33,
+                 "id": 32,
                  "unit": 4,
                  "title": "লেকচার ১০.২ঃ রেফারেন্সিং টুলস (Mendeley, EndNote, Zotero) - এর ব্যবহার । Usage of Referencing Tools",
                  "src": "https://youtu.be/4F1SFzGAG0M",
                  "type": "lecture"
             },
             {    
-                "id": 34,
+                "id": 33,
                 "unit": 4,
                 "title": "Quiz",
                 "type":"quiz",
@@ -540,28 +533,28 @@
         ],
         "5" : [
             {
-                "id": 35,
+                "id": 34,
                 "unit": 5,
                 "title": "লেকচার ১১.১ঃ রিসার্চ ইথিক্স । Research Ethics",
                 "src": "https://youtu.be/Xl7TFPLGNuI",
                 "type": "lecture"
             },
             {
-                "id": 36,
+                "id": 35,
                 "unit": 5,
                 "title": "লেকচার ১১.২ঃ প্ল্যাজারিজম (রচনাচুরি) ও তা এড়িয়ে চলার উপায় । Plagiarism and How to Avoid it",
                 "src": "https://youtu.be/KeBORaCAtEI",
                 "type": "lecture"
             },
             {
-                "id": 37,
+                "id": 36,
                 "unit": 5,
                 "title": "লেকচার ১১.৩ঃ প্ল্যাজারিজম নির্ণায়ক (Turnitin, Grammarly) ও প্যারাফ্রেজিং (Quillbot) টুলসের ব্যবহার।",
                 "src": "https://youtu.be/XSudeNYJQo0",
                 "type": "lecture"
             },
             {    
-                "id": 38,
+                "id": 37,
                 "unit": 5,
                 "title": "Quiz",
                 "type":"quiz",
@@ -600,28 +593,28 @@
                 ]
             },
            {
-            "id": 39,
+            "id": 38,
             "unit": 5,
             "title": "লেকচার ১২.১ঃ পেপার সাবমিশন চেকলিস্ট, পিয়ার রিভিউ পদ্ধতি এবং জার্ণাল ফাইন্ডার ও সিলেকশন।",
             "src": "https://youtu.be/HLddqSPFVAQ",
             "type": "lecture"
            },
            {
-            "id": 40,
+            "id": 39,
             "unit": 5,
             "title": "লেকচার ১২.২ঃ পেপার সাবমিশনে ভূল, কাভার/রিভিউ রেসপন্স লেটার,পেপার রিজেক্ট হলে করণীয়।",
             "src": "https://youtu.be/Lh6Lah-AJMI",
             "type": "lecture"
            },
            {
-            "id": 41,
+            "id": 40,
             "unit": 5,
             "title": "১২.৩ঃ Wiley জার্ণালে পেপার সাবমিশন । Paper submission to Wiley Journal",
             "src": "https://youtu.be/3N3qWiBsIwM",
             "type": "lecture"
             },
             {    
-                "id": 42,
+                "id": 41,
                 "unit": 5,
                 "title": "Quiz",
                 "type":"quiz",
@@ -656,5 +649,5 @@
             }
         ]
     },
-    "totalItem": 42
+    "totalItem": 41
 }
