@@ -25,10 +25,12 @@ module.exports = {
 		const { email } = student;
 		
 		StudentSchema.findOne({ email })
-      .select('institution')
+      .select('institution dept country')
 	  .then((res1) => {
 		  
 		student['institution']=res1.institution;
+		student['dept']=res1.dept;
+		student['country']=res1.country;
 		
 		StudentCompletdCourseModel.updateOne(
 			{ courseId },
